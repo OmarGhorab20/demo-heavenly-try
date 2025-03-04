@@ -1,6 +1,0 @@
-{
-    "rewrites": [
-      { "source": "/api/(.*)", "destination": "https://demo-heavenly-try.vercel.app/api/$1" }
-    ]
-  }
-  

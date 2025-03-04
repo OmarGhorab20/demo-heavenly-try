@@ -27,12 +27,13 @@ const app = express();
 const server = http.createServer(app);
 const PORT = process.env.PORT || 5000;
 
-  const corsOptions = {
-    origin: process.env.CLIENT_URL,
-    credentials: true, // Allow cookies to be sent
-  };
-  
-  app.use(cors(corsOptions));
+const corsOptions = {
+  origin: [process.env.CLIENT_URL, "https://demo-heavenly-try-wsv3.vercel.app"],
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  allowedHeaders: "Content-Type,Authorization",
+};
+app.use(cors(corsOptions));
 
 // Handle Stripe webhooks before body parsing middleware
 app.use('/api/payments/stripe-webhook', express.raw({ type: 'application/json' }), handleStripeWebhook);
