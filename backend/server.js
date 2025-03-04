@@ -72,9 +72,15 @@ app.use((err, req, res, next) => {
 });
 
 // Setup Socket.io
+const allowedOrigins = [
+  "https://heavenly-demo.netlify.app", // Your frontend URL
+  "http://localhost:5173", // Local development
+];
+
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL,
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
     credentials: true,
   },
   transports: ["websocket", "polling"],
