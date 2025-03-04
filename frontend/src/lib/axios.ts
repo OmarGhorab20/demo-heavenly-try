@@ -13,7 +13,7 @@ declare module 'axios' {
 }
 
 const axiosInstance: AxiosInstance = axios.create({
-  baseURL: "https://demo-heavenly-server.vercel.app/api",
+  baseURL: "https://demo-heavenly-try.vercel.app/api",
   withCredentials: true,
 });
 

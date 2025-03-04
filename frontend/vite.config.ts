@@ -22,13 +22,12 @@ export default defineConfig(({ mode }) => ({
   server: {
     proxy: {
       '/api': {
-        target: "https://demo-heavenly-server.vercel.app",
+        target: "https://demo-heavenly-try.vercel.app",
         changeOrigin: true,
-        secure: true, // Set to false if using a self-signed SSL
-        credentials: true,
+        secure: true,
       },
     },
-  },
+  },  
   build: {
     minify: "esbuild", // Keep esbuild for faster builds
     target: "esnext",
