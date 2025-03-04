@@ -28,7 +28,7 @@ const server = http.createServer(app);
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: [process.env.CLIENT_URL, "https://demo-heavenly-try-wsv3.vercel.app"],
+  origin: [process.env.CLIENT_URL],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   allowedHeaders: "Content-Type,Authorization",
