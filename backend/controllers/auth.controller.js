@@ -21,7 +21,7 @@ const AUTH_CONSTANTS = {
   COOKIE_CONFIG: {
     HTTP_ONLY: true,
     SECURE: process.env.NODE_ENV === 'production', // Use `false` locally
-    SAME_SITE: 'none'
+    SAME_SITE: 'strict'
   }  
 };
 
