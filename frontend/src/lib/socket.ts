@@ -2,7 +2,7 @@
 import { io } from 'socket.io-client';
 
 export const createSocket = (userId: string, isAdmin: boolean) => {
-  const socket = io("https://demo-heavenly-try.vercel.app", {
+  const socket = io("https://sweet-adventure-production.up.railway.app", {
     query: { userId, isAdmin },
     reconnection: true,
     withCredentials: true,

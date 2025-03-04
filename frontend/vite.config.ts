@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     proxy: {
       '/api': {
-        target: "https://demo-heavenly-try.vercel.app",
+        target: "https://sweet-adventure-production.up.railway.app",
         changeOrigin: true,
         secure: true,
       },
