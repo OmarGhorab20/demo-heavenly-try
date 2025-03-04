@@ -5,7 +5,7 @@ export const createSocket = (userId: string, isAdmin: boolean) => {
   const socket = io("https://demo-heavenly-try.vercel.app", {
     query: { userId, isAdmin },
     reconnection: true,
-    withCredentials: false,
+    withCredentials: true,
     transports: ["websocket", "polling"],
   });
   socket.on('connect', () => {

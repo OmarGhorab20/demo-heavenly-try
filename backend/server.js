@@ -74,8 +74,8 @@ app.use((err, req, res, next) => {
 // Setup Socket.io
 const io = new Server(server, {
   cors: {
-    origin: "*", // Allow all origins (try this for testing)
-    credentials: false, // Ensure this matches frontend
+    origin: process.env.CLIENT_URL,
+    credentials: true,
   },
   transports: ["websocket", "polling"],
 });
