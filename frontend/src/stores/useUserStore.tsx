@@ -116,9 +116,9 @@ export const useUserStore = create<UserStore>((set, get) => ({
       });
     } catch (error: any) {
       if (error.response?.status === 401) {
-        console.error('User is not authenticated'); // Handle expected 401 error
+        console.log('User is not authenticated'); // Handle expected 401 error
       } else {
-        console.error('Error checking authentication:', error); // Log unexpected errors
+        console.log('Error checking authentication:', error); // Log unexpected errors
       }
       set({ user: null, checkingAuth: false }); // Clear user state and stop loading
     }
